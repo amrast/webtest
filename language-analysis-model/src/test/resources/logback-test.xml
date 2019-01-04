@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%-42(%d{HH:mm:ss.SSS} btx[%X{btxId}] [%thread]) %-5level %-54(%logger{54}) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.apache.http" level="INFO"/>
+
+
+    <!-- The following configuration is necessary because Apache Configuration logs a warning
+         whenever an optional configuration file is missing O_o -->
+    <logger name="org.apache.commons.configuration.DefaultConfigurationBuilder" level="ERROR" />
+    <logger name="org.reflections.Reflections" level="INFO"/>
+    <logger name="de.unisaarland" level="TRACE"/>
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>

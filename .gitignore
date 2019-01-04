@@ -1,0 +1,26 @@
+## Temporary Files
+*.log
+**/target/*
+**/dependency-reduced-pom.xml
+
+
+## IntelliJ Idea Files
+*.iml
+*.idea
+*.ipr
+*.iws
+
+## Private Config Files
+
+**/testProperties.conf
+**/application.conf
+**/properties.conf
+**/logback.xml
+
+## Platform / OS Indexing Files
+**/.DS_Store
+
+## Local Files
+deeplearning/
+!/topic-exploration/topic-exploration-svc/src/main/scala/de/unisaarland/st/webtest/topicexploration/targetselection/
+T-SNE-Java/.git-bak/	

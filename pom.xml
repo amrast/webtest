@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.unisaarland.st.xappmapp</groupId>
+    <artifactId>language-analysis</artifactId>
+    <version>0.1-SNAPSHOT</version>
+
+
+  <packaging>pom</packaging>
+
+  <name>Language Analysis - meta project 'all modules'</name>
+
+  <modules>
+    <!-- NOTE: Keep the follwing list in alphabetical order, please. -->
+    <module>language-analysis-api</module>
+    <module>language-analysis-app</module>
+    <module>language-analysis-model</module>
+    <module>language-analysis-rest-client</module>
+    <module>language-analysis-parent</module>
+    <!--<module>language-analysis-svc</module>-->
+    <!--module>language-analysis-tools</module-->
+    <!-- NOTE: Keep the above list in alphabetical order, please. -->
+  </modules>
+
+</project>
