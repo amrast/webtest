@@ -9,9 +9,9 @@
 
     <parent>
         <groupId>de.unisaarland.st.webtest</groupId>
-        <artifactId>webtest-parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
-        <relativePath>../../webtest-parent/pom.xml</relativePath>
+    	<artifactId>language-analysis-parent</artifactId>
+    	<version>1.0-SNAPSHOT</version>
+	<relativePath>../language-analysis-parent/pom.xml</relativePath>
     </parent>
 
     <packaging>jar</packaging>

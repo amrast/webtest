@@ -7,11 +7,12 @@
     <artifactId>language-analysis-app</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
     <parent>
         <groupId>de.unisaarland.st.webtest</groupId>
-        <artifactId>webtest-parent</artifactId>
+        <artifactId>language-analysis-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../../webtest-parent/pom.xml</relativePath>
+        <relativePath>../language-analysis-parent/pom.xml</relativePath>
     </parent>
 
     <packaging>jar</packaging>
