@@ -12,15 +12,13 @@
   <name>Language Analysis - meta project 'all modules'</name>
 
   <modules>
-    <!-- NOTE: Keep the follwing list in alphabetical order, please. -->
+    <module>webtest-base</module>
+    <module>webtest-base-test</module>
     <module>language-analysis-api</module>
     <module>language-analysis-app</module>
     <module>language-analysis-model</module>
     <module>language-analysis-rest-client</module>
     <module>language-analysis-parent</module>
-    <!--<module>language-analysis-svc</module>-->
-    <!--module>language-analysis-tools</module-->
-    <!-- NOTE: Keep the above list in alphabetical order, please. -->
   </modules>
 
 </project>
