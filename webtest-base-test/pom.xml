@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>webtest-base-test</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>jar</packaging>
+
+    <parent>
+        <groupId>de.unisaarland.st.webtest</groupId>
+        <artifactId>language-analysis-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../language-analysis-parent/pom.xml</relativePath>
+    </parent>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>de.unisaarland.st.webtest</groupId>
+            <artifactId>webtest-base</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+         <!--https://mvnrepository.com/artifact/org.specs2/specs2-core_2.11-->
+        <dependency>
+            <groupId>org.specs2</groupId>
+            <artifactId>specs2-core_2.11</artifactId>
+            <version>${version.dependency.specs2}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.specs2</groupId>
+            <artifactId>specs2-junit_2.11</artifactId>
+            <version>${version.dependency.specs2}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${version.dependency.selenium}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>${version.dependency.selenium}</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
