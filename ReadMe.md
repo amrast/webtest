@@ -2,6 +2,43 @@
 # NLS-Service
 
 This service computes the semantic similarity between based on a specified word2vec model.
+A ready to use docker image can be found [here](https://hub.docker.com/r/jh00/nlsservice).
+
+# Docker
+
+The NLS-Service requires a static ip configuration. In the [provided docker image](https://hub.docker.com/r/jh00/nlsservice) this ip is `172.16.1.254`.
+
+To run the service as docker container you have to first create a user defined docker network, e.g.
+```
+docker network create --subnet 172.16.1.0/24 nls-network
+```
+
+Make sure you have configured docker to use more than 4GB RAM, otherwise the service start process may return killed after a few minutes.  
+Then you can invoke the NLS-Service container with a static ip address via
+```
+docker run -it --rm -p 1234:1234 --ip 172.16.1.254 --net=nls-network jh00/nlsservice
+```
+Note: Starting the service takes very much time (5-10 minutes and longer depending on the computers performance).
+
+
+The port expose (`-p`) allows the host environment to access the service.  
+Moreover, this allows you to access the service via `host.docker.internal` from any container (executed with bridge or host network).
+
+You can test that the service works correctly with a simple curl command e.g.  
+from within another container
+```
+curl -X GET 'host.docker.internal:1234/word2vec/wordsimilarity?word1=test&word2
+```
+from within another container in the same network (nls-network)
+```
+curl -X GET 'http://172.16.1.254:1234/word2vec/wordsimilarity?word1=test&word2
+```
+from the host pc (TODO verify if this works)
+```
+curl -X GET 'http://172.16.1.254:1234/word2vec/wordsimilarity?word1=test&word2
+```
+
+should return 1.0
 
 # Compilation
 
