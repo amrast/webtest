@@ -27,15 +27,15 @@ Moreover, this allows you to access the service via `host.docker.internal` from 
 You can test that the service works correctly with a simple curl command e.g.  
 from within another container
 ```
-curl -X GET 'host.docker.internal:1234/word2vec/wordsimilarity?word1=test&word2
+curl -X GET 'host.docker.internal:1234/word2vec/wordsimilarity?word1=test&word2=test'
 ```
 from within another container in the same network (nls-network)
 ```
-curl -X GET 'http://172.16.1.254:1234/word2vec/wordsimilarity?word1=test&word2
+curl -X GET 'http://172.16.1.254:1234/word2vec/wordsimilarity?word1=test&word2=test'
 ```
 from the host pc (TODO verify if this works)
 ```
-curl -X GET 'http://172.16.1.254:1234/word2vec/wordsimilarity?word1=test&word2
+curl -X GET 'http://172.16.1.254:1234/word2vec/wordsimilarity?word1=test&word2=test'
 ```
 
 should return 1.0
