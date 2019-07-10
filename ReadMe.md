@@ -20,7 +20,7 @@ Therefore it is recommented to start the service only once and let it run in the
 
 The NLS-Service is started by invoking the specified jar from the step above
 ```
-java -jar -Xms4G language-analysis-app-1.0-SNAPSHOT-standalone.jar
+java -jar -Xmx4G language-analysis-app-1.0-SNAPSHOT-standalone.jar
 ```
 
 # Customize Ip and location of the word2vec model
