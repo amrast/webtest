@@ -28,7 +28,7 @@ To be able to access the service outside of its docker container you should eith
 2. create a docker subnetwork, then other containers within the same docker network can access the service via its assigned ip
 	```
 	docker network create --subnet 172.16.1.0/24 nls-network
-	docker run -it --rm -p 1234:1234 --ip 172.16.1.254 --net=nls-network jh00/nlsservice
+	docker run -it --rm --ip 172.16.1.254 --net=nls-network jh00/nlsservice
 	```
 
 **Note:  Starting the service takes very much time**  (5-10 minutes and longer depending on the computers performance).
