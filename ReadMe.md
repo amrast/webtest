@@ -18,11 +18,11 @@ To be able to access the service outside of its docker container you should eith
 1. expose the port `1234` to the host computer  
 	expose the service to **localhost only**:
 	```
-		docker run -it --rm -p 127.0.0.1:1234:1234 jh00/nlsservice /bin/bash
+		docker run -it --rm -p 127.0.0.1:1234:1234 jh00/nlsservice
 	```
 	expose the service to **all IPv4 addresses on the local machine** (this allows e.g. other machines in the hosts network to access the service via the hosts ip address):
 	```
-	docker run -it --rm -p 1234:1234 jh00/nlsservice /bin/bash
+	docker run -it --rm -p 1234:1234 jh00/nlsservice
 	```
 	__OR__  
 2. create a docker subnetwork, then other containers within the same docker network can access the service via its assigned ip
