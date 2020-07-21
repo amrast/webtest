@@ -32,7 +32,8 @@ To be able to access the service outside of its docker container you should eith
 	```
 
 **Note:  Starting the service takes very much time**  (5-10 minutes and longer depending on the computers performance).  
-Once the service is started it will print a message `INFO de.unisaarland.st.webtest.server.LanguageServiceServer - Server online at http://0.0.0.0:1234`
+Once the service is started it will print a message 
+>INFO de.unisaarland.st.webtest.server.LanguageServiceServer - Server online at http://0.0.0.0:1234
 
 
 You can test that the service works correctly with a simple curl command which should return "1.0" (depending on which network option you chose)  
