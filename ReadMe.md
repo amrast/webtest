@@ -1,10 +1,10 @@
 
-# NLS-Service
+# NL-Service
 
 This service computes the semantic similarity between based on a specified word2vec model.
 A ready to use docker image can be found [here](https://hub.docker.com/r/jh00/nlsservice).
 
-As default, the NLS-Service is configured to listen to ip `0.0.0.0` at port `1234`.
+As default, the NL-Service is configured to listen to ip `0.0.0.0` at port `1234`.
 This means it exposes port 1234 on *all IPv4 addresses on the local machine*, i.e. any computer in the network is able to access the service through the hosts ethernet ip.  
 If you want to use the service exclusively on your local machine (and deploy it via docker) you should change this configuration to `127.0.0.1` as described [below](#Customize-Ip-and-location-of-the-word2vec-model).
 
@@ -45,7 +45,7 @@ You can test that the service works correctly with a simple curl command which s
 	curl -X GET 'localhost:1234/word2vec/wordsimilarity?word1=test&word2=test'
 	```
 	
-2.	from within another container in the same network (nls-network)
+2.	from within another container in the same network (nl-network)
 	```
 	curl -X GET 'http://172.16.1.254:1234/word2vec/wordsimilarity?word1=test&word2=test'
 	```
@@ -67,7 +67,7 @@ This will compile a runnable jar at `$projectDir/language-analysis-app/target/la
 The service takes a very long time to start and about 4GB of RAM to load the word2vec model.
 Therefore it is recommented to start the service only once and let it run in the background, meanwhile any (client)application code is invoked independently from this service.
 
-The NLS-Service is started by invoking the specified jar from the step above
+The NL-Service is started by invoking the specified jar from the step above
 ```
 java -jar -Xmx4G language-analysis-app-1.0-SNAPSHOT-standalone.jar
 ```
