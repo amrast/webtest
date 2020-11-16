@@ -4,7 +4,7 @@ FROM ubuntu:latest as nlsbuilder
 
 WORKDIR /home/maven
 
-RUN apt-get update && apt-get install -y maven git openjdk-8-jdk scala && \
+RUN apt-get update && DEBIAN_FRONTEND="noninteractive" apt-get install -y maven git openjdk-8-jdk scala && \
 	update-java-alternatives --set /usr/lib/jvm/java-1.8.0-openjdk-amd64
 
 RUN git clone https://github.com/Hotzkow/webtest.git
@@ -15,7 +15,7 @@ RUN cd webtest && mvn install
 
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get install -y openjdk-8-jre wget curl
+RUN apt-get update && DEBIAN_FRONTEND="noninteractive" apt-get install -y openjdk-8-jre wget curl
 
 
 
