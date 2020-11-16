@@ -15,7 +15,7 @@ RUN cd webtest && mvn install
 
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get install -y openjdk-8-jre wget
+RUN apt-get update && apt-get install -y openjdk-8-jre wget curl
 
 
 
