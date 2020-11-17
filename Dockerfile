@@ -15,11 +15,9 @@ RUN cd webtest && mvn install
 
 FROM ubuntu:latest
 
-RUN apt-get update && DEBIAN_FRONTEND="noninteractive" apt-get install -y openjdk-8-jre wget curl
-
-
-
 COPY --from=nlsbuilder /home/maven/webtest/language-analysis-app/target/language-analysis-app-1.0-SNAPSHOT-standalone.jar /home/nls-service.jar
+
+RUN apt-get update && DEBIAN_FRONTEND="noninteractive" apt-get install -y openjdk-8-jre wget curl
 
 EXPOSE 1234
 
